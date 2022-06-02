@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:context="http://www.springframework.org/schema/context" 
+xmlns:p="http://www.springframework.org/schema/p" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+  <bean id="address1" class="com.capg.springcore.Address">  
+  <property name="street" value="Marathahalli"></property>  
+  <property name="city" value="Bangalore"></property>  
+  <property name="state" value="Karnataka"></property>
+  <property name="zip" value="572218"></property>   
+  <property name="country" value="India"></property>  
+  </bean>
+  
+  <bean name="obj" class="com.capg.springcore.Customer">  
+  <property name="customerId" value="01"></property>  
+  <property name="customerName" value="Sunil"></property> 
+  <property name="customerContact" value="8301781522"></property>  
+  <property name="address" ref="address1"></property>  
+  </bean> 
+
+</beans>
